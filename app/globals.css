@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+
+  @font-face {
+    font-family: "Sofia Pro Medium";
+    src: url("/fonts/Sofia Pro Medium Az.otf");
+    font-weight: 500;
+    font-style: normal;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  @font-face {
+    font-family: "Sofia Pro Black";
+    src: url("/fonts/Sofia Pro Black Az.otf");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sofia Pro Bold";
+    src: url("/fonts/Sofia Pro Bold Az.otf");
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sofia Pro Regular";
+    src: url("/fonts/Sofia Pro Regular Az.otf");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  button, select {
+    text-transform: none;
+    outline: none;
+  }
+};

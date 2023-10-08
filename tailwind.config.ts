@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,13 +9,32 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        primary: "Sofia Pro Medium, sans",
+        secondary: "Sofia Pro Bold, sans",
+        black: "Sofia Pro Black, sans",
+        normal: "Sofia Pro Regular, sans"
       },
+      
+      screens: {
+        '2xl': {'max': '1535px'},
+        // => @media (max-width: 1535px) { ... }
+  
+        'xl': {'max': '1279px'},
+        // => @media (max-width: 1279px) { ... }
+  
+        'lg': {'max': '1023px'},
+        // => @media (max-width: 1023px) { ... }
+  
+        'md': {'max': '767px'},
+        // => @media (max-width: 767px) { ... }
+  
+        'sm': {'max': '414px'},
+        // => @media (max-width: 639px) { ... }
+      }
     },
   },
   plugins: [],
-}
+};
+ 
 export default config

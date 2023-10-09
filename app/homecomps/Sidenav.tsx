@@ -22,8 +22,8 @@ const navItems: NavProps[] = [
 ];
 
 const user = {
-    name: "carl",
-    avatar: "1u.jpg",
+    name: "carlroberts",
+    avatar: "/media/1u.jpg",
     followerCount: 10,
     followingCount: 20,
     postCount: 30,
@@ -43,28 +43,30 @@ const Sidenav = () => {
     
     return (
         <nav className="bg-neutral-50 h-full">
-            <div className="block space-y-10">
-                <div className="justify-center space-y-4">
-                    <img src={user.avatar} alt="avatar" className="rounded-full w-12 h-12 justify-center" />
-                    <p className="text-zinc-800 text-sm font-normal">{user.name}</p>
+            <div className="space-y-20">
+                <div className="block space-y-10 px-12">
+                    <div className="justify-center space-y-4">
+                        <img src={user.avatar} alt="avatar" className="rounded-full w-12 h-12 justify-center mx-auto" />
+                        <p className="text-zinc-800 text-sm text-center font-normal">@{user.name}</p>
+                    </div>
+                    <div className="flex items-center justify-between space-x-1">
+                        <span className="space-y-1">
+                            <p className="text-stone-800 text-base text-center font-normal">{user.postCount}</p>
+                            <p className="opacity-70 text-zinc-500 text-xs text-center font-normal">POSTS</p>
+                        </span>
+                        <span className="space-y-1">
+                            <p className="text-stone-800 text-base  text-center font-normal">{user.followerCount}</p>
+                            <p className="opacity-70 text-zinc-500 text-xs text-center font-normal">FOLLOWERS</p>
+                        </span>
+                        <span className="space-y-1">
+                            <p className="text-stone-800 text-base  text-center font-normal">{user.followingCount}</p>
+                            <p className="opacity-70 text-zinc-500  text-center text-xs font-normal">FOLLOWING</p>
+                        </span>
+                    </div>
                 </div>
-                <div className="flex items-center justify-between space-x-11">
-                    <span className="space-y-1">
-                        <p className="text-stone-800 text-base font-normal">{user.postCount}</p>
-                        <p className="opacity-70 text-zinc-500 text-xs font-normal">POSTS</p>
-                    </span>
-                    <span className="space-y-1">
-                        <p className="text-stone-800 text-base font-normal">{user.followerCount}</p>
-                        <p className="opacity-70 text-zinc-500 text-xs font-normal">FOLLOWERS</p>
-                    </span>
-                    <span className="space-y-1">
-                        <p className="text-stone-800 text-base font-normal">{user.followingCount}</p>
-                        <p className="opacity-70 text-zinc-500 text-xs font-normal">FOLLOWING</p>
-                    </span>
+                <div className="block space-y-10 pr-40 pl-12">
+                    {memoNavItems}
                 </div>
-            </div>
-            <div className="block space-y-10 pr-40 pl-12">
-                {memoNavItems}
             </div>
         </nav>
     )

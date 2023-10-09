@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "fslightbox-react": "^1.7.6",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/fslightbox-react": "^1.7.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

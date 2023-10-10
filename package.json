@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "flowbite-react": "^0.6.4",
     "fslightbox-react": "^1.7.6",
     "next": "13.5.4",
     "react": "^18",

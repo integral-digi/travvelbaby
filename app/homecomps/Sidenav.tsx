@@ -21,7 +21,7 @@ const navItems: NavProps[] = [
     {name: "/assets/logout.svg", label: "Logout", href: "#", isActive: false}
 ];
 
-const user = {
+export const user = {
     name: "carlroberts",
     avatar: "/media/1u.jpg",
     followerCount: 10,

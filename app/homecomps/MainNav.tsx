@@ -1,4 +1,7 @@
+"use client"
 import Link from "next/link";
+import { useState } from "react";
+import PostButton from "./PostButton";
 
 interface NavItemProps {
     id: number,
@@ -18,6 +21,10 @@ const navItems: NavItemProps[] = [
 const logoMain = { name: "logo", href: "/", src: "/assets/logo-main.svg" };
 
 const MainNav = () => {
+    const [openModal, setOpenModal] = useState<string | undefined>();
+    const [modalPlacement, setModalPlacement] = useState<string>('center');
+    const props = { modalPlacement, openModal, setModalPlacement, setOpenModal };
+
     return (
         <nav className="shadow-sm top-0" role="navigation">
             <div className="flex justify-between items-center relative h-14 w-full px-8">
@@ -31,12 +38,7 @@ const MainNav = () => {
                     <img src="/assets/search.svg" alt="search" className="w-5 h-5 absolute right-4" />  
                 </div>
                 <div className="flex items-center space-x-4">
-                    <button className="h-9 bg-stone-500 rounded-sm">
-                        <span className="flex items-center space-x-1 px-2">
-                            <img src="/assets/add.svg" alt="add" className="w-2.5 h-2.5" />
-                            <p className="text-xs text-white font-normal">New Post</p>
-                        </span>
-                    </button>
+                    <PostButton />
                     <button className="h-9 bg-stone-500 rounded-sm">
                         <p className="text-xs text-white font-normal px-2">Go Live</p>
                     </button>

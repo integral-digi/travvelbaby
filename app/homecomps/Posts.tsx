@@ -22,6 +22,18 @@ const recentUpdates: PostProps[] = [
     {name: "maryliu", avatar: "/media/6u.jpg", time: "4 hrs ago", type: "photo", photo: "/media/photo3.jpg", caption: "I've been dreaming of visiting this place for years, and it's even more stunning than I imagined. 🏞 #NatureLover #BucketList", likes: 10, comments: 2},
 ];
 
+const formatCaption = (caption: string) => {
+    const words = caption.split(" ");
+    const formattedWords = words.map((word, index) => {
+        if (word.startsWith("#")) {
+            return <span key={index} className="text-stone-500 cursor-pointer">{word} </span>
+        } else {
+            return <span key={index}>{word} </span>
+        }
+    });
+    return formattedWords;
+}
+
 const Posts = () => {
     const [like, setLike] = useState(false);
 
@@ -71,13 +83,13 @@ const Posts = () => {
                                         </div>
                                     </div>
                                     <div className="block">
-                                        <p className="text-zinc-800 text-sm font-normal">{entry.caption}</p>
+                                        <p className="text-zinc-800 text-sm font-normal">{formatCaption(entry.caption || " ")}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="">
                                 <hr className="w-full h-px bg-neutral-200" />
-                                <input type="text" placeholder="Add a comment..." className="w-full h-12 text-zinc-400 text-sm font-normal px-4 focus:outline-none caret-sky-950" />
+                                <input type="text" placeholder="Add a comment..." className="w-full h-12 text-zinc-400 text-sm font-normal px-4 caret-sky-950 focus:outline-none border-0" />
                             </div>
                         </div>
                     </div>

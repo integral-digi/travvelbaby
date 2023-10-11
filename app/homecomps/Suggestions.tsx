@@ -12,7 +12,7 @@ const SuggestedActs = () => {
     return (
         <div className="suggested-acts w-full space-y-4">
             <div className="space-y-8">
-                <p className="text-zinc-400 text-xs font-bold">Suggested Accounts</p>  
+                <p className="text-zinc-400 text-xs font-secondary">Suggested Accounts</p>  
             </div>
             <div className="entries block space-y-4">
                 {suggestedUsers.map((entry, index) => (

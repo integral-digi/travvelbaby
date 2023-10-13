@@ -38,10 +38,10 @@ const PlannedTrips = () => {
             <div className="space-y-8">
                 <p className="text-zinc-400 text-xs font-secondary">My Planned Trips</p>
             </div>
-            <div className="flex items-center space-x-4 max-w-[1080px] pb-6 overflow-x-scroll">
+            <div className="flex items-center space-x-4 justify-between max-w-[1080px] pb-6 overflow-x-scroll">
                 {userTrips.map((entry, index) => (
                     <div className="entry w-full space-y-7 relative" key={index}> 
-                        <div className="w-96 h-96 rounded-md"> 
+                        <div className="w-96 h-96 rounded-md lg:w-72 lg:h-72"> 
                             <Link href={entry.href}>
                                 <img src={entry.photo} alt="photo" className="w-full h-full object-cover" />
                                 <span className="flex items-center space-x-2 absolute left-4 top-4 p-2 bg-gradient-to-b from-white to-white rounded-md">

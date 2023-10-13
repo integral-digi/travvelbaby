@@ -73,7 +73,7 @@ const Visualization = () => {
 
   return (
     <div className="visualization w-full space-y-4">
-      <div className='flex items-center justify-between w-full'>
+      <div className='flex items-center justify-between w-full lg:hidden'>
         {tabData.map((tab, index) => (
           <div key={index} className="block space-y-4 w-max">
             <p className="text-stone-500 text-sm text-center font-normal">{tab.name}</p>

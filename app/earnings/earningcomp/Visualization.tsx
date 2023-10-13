@@ -34,13 +34,12 @@ const data = [
 
 const options = {
   chartArea: { width: "100%", height: "100%" },
-  hAxis: { title: "", titleTextStyle: { color: "#333" } },
+  hAxis: { title: "Time", titleTextStyle: { color: "#333" } },
   legend: { position: "none" },
   line: { color: "#ECF3FD", lineWidth: 0 },
   colors: ['#1A73E8', '#5F9DEF', '#ECF3FD', '#EBEDED', '#EBEDED'],
   crosshair: { trigger: "both", color: "#EBEDED" },
   vAxis: {
-    title: "",
     titleTextStyle: { color: "#333" },
     gridlines: { color: "#EBEDED" },
   },

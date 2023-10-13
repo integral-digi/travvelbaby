@@ -3,6 +3,7 @@ import ReelLife from "./homecomps/ReelLife";
 import Sidenav from "./homecomps/Sidenav";
 import SuggestedActs from "./homecomps/Suggestions";
 import MainNav from "./homecomps/MainNav";
+import MobileNav from "./homecomps/MobileNav";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         <div className="pr-8 w-[25%] lg:hidden">
           <SuggestedActs />
         </div>
+        <MobileNav />
       </div>
     </body>
   )

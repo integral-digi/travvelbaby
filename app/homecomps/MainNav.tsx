@@ -11,7 +11,7 @@ interface NavItemProps {
     href: string;
 }
 
-const navItems: NavItemProps[] = [
+export const navItems: NavItemProps[] = [
     { id: 1, name: "messages", icon: "/assets/message.svg", href: "#" },
     { id: 2,  name: "explore", icon: "/assets/explore.svg", href: "#" },
     { id: 3,  name: "notification", icon: "/assets/notification.svg", href: "#" },

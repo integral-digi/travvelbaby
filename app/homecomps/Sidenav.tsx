@@ -9,13 +9,13 @@ interface NavProps {
 }
 
 const navItems: NavProps[] = [
-    {name: "/assets/feed.svg", label: "Feed", href: "#",  isActive: false},
+    {name: "/assets/feed.svg", label: "Feed", href: "/",  isActive: false},
     {name: "/assets/explore.svg", label: "Explore", href: "#", isActive: false},
     {name: "/assets/traveler.svg", label: "Travelers", href: "#", isActive: false},
     {name: "/assets/notification.svg", label: "Notification", href: "#", isActive: false},
     {name: "/assets/save.svg", label: "Saved", href: "#", isActive: false},
     {name: "/assets/shop.svg", label: "Shop", href: "#", isActive: false},
-    {name: "/assets/earnings.svg", label: "Earnings", href: "#", isActive: false},
+    {name: "/assets/earnings.svg", label: "Earnings", href: "earnings", isActive: false},
     {name: "/assets/settings.svg", label: "Settings", href: "#", isActive: false},
     {name: "/assets/help.svg", label: "Help", href: "#", isActive: false},
     {name: "/assets/logout.svg", label: "Logout", href: "#", isActive: false}

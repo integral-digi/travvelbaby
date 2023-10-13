@@ -1,9 +1,8 @@
 import { EllipsisHorizontalIcon, UserPlusIcon } from "@heroicons/react/20/solid"
-import exp from "constants";
 
 export const user = {
-    name: "Carl Roberts",
-    avatar: "/media/1u.jpg",
+    name: "Sheilla Brian",
+    avatar: "/media/3u.jpg",
     cover: "/media/cover.jpg",
     bio: "“Model based out of New York. Follow my adventure as I travel the globe.“",
     followers: 100,
@@ -14,7 +13,7 @@ export const user = {
     videos: 100,
     about: {
         work: "Model @ Fashion Nova",
-        followedBy: "nina, sheilla, maryliu, +30 others",
+        followedBy: "nina, jason, maryliu, +30 others",
     },
     isVerified: true,
     photos: [
@@ -37,7 +36,9 @@ const UserBio = () => {
                 <img src={user.cover} alt="cover" className="w-full h-72 object-cover" />
             </div>
             <div className="block space-y-4 mx-auto relative px-24">
-                <img src={user.avatar} alt="avatar" className="-mt-24 rounded-full w-36 h-36 justify-center mx-auto my-auto" />
+                <span className="-mt-24 w-40 h-40 rounded-full bg-white flex items-center justify-center mx-auto">
+                    <img src={user.avatar} alt="avatar" className="rounded-full w-36 h-36 mx-auto my-auto" />
+                </span>
                 <span className="flex items-center justify-center space-x-3">
                     <p className="font-normal">{user.name}</p>
                     {user.isVerified ? <img src="/assets/verified.svg" alt="verified" className="cursor-pointer w-4 h-4" /> : null}
@@ -45,7 +46,7 @@ const UserBio = () => {
                 <span className="flex justify-center">
                     <p className="text-stone-500 text-center text-sm font-normal">{user.bio}</p>
                 </span>
-            <div className="flex items-center space-x-3 absolute right-24 top-20">
+            <div className="flex items-center space-x-3 absolute right-24 top-20 lg:hidden">
                 <button className="p-4 bg-stone-500 font-normal flex items-center h-7 w-fit space-x-4 rounded-sm">
                     <UserPlusIcon className="text-white w-3 h-3" />
                     <p className="text-white text-sm font-normal">Subscribe</p>

@@ -1,5 +1,6 @@
 "use client"
 import { UserPlusIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 const suggestedUsers = [
     {name: "maryliu", avatar: "/media/6u.jpg", description: "Interacts with your content"},
@@ -19,12 +20,14 @@ const SuggestedActs = () => {
                     <div className="entry" key={index}>
                         <div className="block space-y-4 w-full">
                             <div className="flex items-center justify-between">
-                                <div className="flex items-center justify-center space-x-3">
-                                    <img src={entry.avatar} alt="avatar" className="rounded-full w-8 h-8 justify-center mx-auto my-auto" />
-                                    <span className="">
-                                        <p className="font-normal">{entry.name}</p>
-                                        <p className="text-stone-500 text-xs font-normal">{entry.description}</p>
-                                    </span>
+                                <div className="">
+                                    <Link href={`/${entry.name}`} className="flex items-center justify-center space-x-3">
+                                        <img src={entry.avatar} alt="avatar" className="rounded-full w-8 h-8 justify-center mx-auto my-auto" />
+                                        <span className="">
+                                            <p className="font-normal">{entry.name}</p>
+                                            <p className="text-stone-500 text-xs font-normal">{entry.description}</p>
+                                        </span>
+                                    </Link>
                                 </div>
                                 
                                 <button className="text-stone-500 font-normal flex items-center h-7 w-fit px-4 border border-stone-500 rounded-sm">

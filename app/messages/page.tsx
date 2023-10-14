@@ -8,13 +8,13 @@ import MsgHeader from "./messagecomps/MsgHeader";
 const Messages = () => {
     const [id, setId] = useState(0);
     return (
-        <div className="w-full">
+        <div className="w-full h-screen">
             <div className="top-0 w-full lg:hidden">
                 <MainNav />
             </div>
             <div className="flex w-full">
                 <div className="w-[33%] lg:hidden pl-8 pt-6">
-                    <MsgSidebar />
+                    <MsgSidebar id={id} />
                 </div>
                 <div className="w-full lg:w-[67%]">
                     <div className="">

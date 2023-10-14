@@ -30,7 +30,7 @@ const MsgSidebar = ({ id, setId }: any) => {
     };
   
     return (
-      <div className="block space-y-10 w-full">
+      <div className="block space-y-10 w-full h-fit overflow-x-hidden overflow-y-scroll">
         <div className="w-full space-y-10">
           <p className="text-sm text-stone-800 font-normal">Message</p>
           <div className="flex items-center space-x-4 pr-8 relative">
@@ -40,7 +40,7 @@ const MsgSidebar = ({ id, setId }: any) => {
         </div>
         <div className="w-full space-y-0">
           {recentMessages.map((msg, index) => (
-            <div className="w-full hover:bg-neutral-50 items-center" key={index} data-testid={`msg-${index}`}>
+            <div className="w-full hover:bg-neutral-50 items-center cursor-pointer" key={index} data-testid={`msg-${index}`}>
               <div className="pr-4 py-8 w-full relative">
                 <div className="flex items-center space-x-4 w-max">
                   <span className="relative block">

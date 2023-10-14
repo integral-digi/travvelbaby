@@ -3,8 +3,8 @@ import MessageInput from "./MsgInput";
 
 const MsgBody = ({ id }: any) => {
   return (
-    <div className="w-full h-full border-l border-gray-400 border-opacity-20"> 
-      <div className="w-full h-full pt-8 px-8 space-y-4">
+    <div className="w-full h-fit border-l border-gray-400 border-opacity-20"> 
+      <div className="w-full h-full pt-8 px-8 pb-4 space-y-4">
         {msgData[id].conversation.map((msg) => (
           <div key={msg.id} className="w-[60%] h-auto space-y-4">  
             <div className={msg.role === "receiver" ? "w-fit space-y-4 float-left, left-0, clear-both" : "w-fit float-right, right-0, clear-both"}>
@@ -12,7 +12,7 @@ const MsgBody = ({ id }: any) => {
                 <div className="flex items-center space-x-4">
                   {msg.message.map((image, imgIndex) => (
                     <div key={imgIndex} className="object-cover w-72 h-64">
-                      <img src={image} alt={`image-${imgIndex}`} className="w-full h-full" />
+                      <img src={image} alt={`image-${imgIndex}`} className="w-full h-full rounded-xl" />
                     </div>
                   ))}
                 </div>
@@ -36,7 +36,7 @@ const MsgBody = ({ id }: any) => {
           </div>
         }
       </div>
-      <div className="w-full bottom-0">
+      <div className="w-full bottom-0 fixed">
         <MessageInput />
       </div>
     </div>

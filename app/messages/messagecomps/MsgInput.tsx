@@ -20,7 +20,7 @@ const MessageInput = () => {
                 placeholder="Type a message..."
                 className='border-none w-full h-16 px-4 py-2 text-sm font-normal focus:outline-none'
             />
-            <div className='absolute right-4 top-4 flex items-center space-x-3'>
+            <div className='absolute right-4 top-4 flex items-center space-x-3 z-50'>
                 <span className='flex items-center space-x-3'>
                     <img src="/assets/emoji.svg" alt="emoji" className='w-5 h-5' />
                     <img src="/assets/attachment.svg" alt="attachment" className='w-5 h-5' />

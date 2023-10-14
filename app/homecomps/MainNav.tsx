@@ -12,7 +12,7 @@ interface NavItemProps {
 }
 
 export const navItems: NavItemProps[] = [
-    { id: 1, name: "messages", icon: "/assets/message.svg", href: "#" },
+    { id: 1, name: "messages", icon: "/assets/message.svg", href: "/messages" },
     { id: 2,  name: "explore", icon: "/assets/explore.svg", href: "#" },
     { id: 3,  name: "notification", icon: "/assets/notification.svg", href: "#" },
     { id: 4,  name: "profile", avatar: "/media/1u.jpg", href: "#" },

@@ -14,8 +14,7 @@ interface MsgDataProps {
     lastSeen?: string;
     conversation: {
         id: number;
-        sender: string;
-        receiver: string;
+        role: string;
         message?: string | string[];
         messageType: string;
         gift?: string;
@@ -28,14 +27,13 @@ export const msgData: MsgDataProps[] = [
     {
         id: 1,
         name: "nina",
-        avatar: "/media/1u.jpg",
+        avatar: "/media/3u.jpg",
         isTyping: true,
         lastSeen: "Active now",
         conversation: [
             {
                 "id": 1,
-                "sender": "nina",
-                "receiver": "carlroberts",
+                "role": "sender",
                 "message": ["/media/maldives.jpg", "/media/bali.jpg", "/media/zanzibar.jpg"],
                 "messageType": "image",
                 "time": "5 hrs ago",
@@ -43,26 +41,23 @@ export const msgData: MsgDataProps[] = [
             },
             {
                 "id": 2,
-                "sender": "nina",
-                "receiver": "carlroberts",
+                "role": "sender",
                 "message": "Hey people, thanks for supporting me here on travvelbaby, I’m raising money to go to Maldives, I have zero doubt it will be a surreal experience. Help me go to Maldives and get the chance to hangout with me on my weekly podcast. Click the Support button now, Let’s go baby!!!!",
                 "messageType": "text",
                 "time": "5 mins ago",
                 "isRead": true,
             },
             {
-                "id": 3,
-                "sender": "carlroberts",
-                "receiver": "nina",
+                "id": 3, 
+                "role": "receiver",
                 "message": "Awesome.",
                 "messageType": "text",
                 "time": "5 mins ago",
                 "isRead": true,
             },
             {
-                "id": 4,
-                "sender": "carlroberts",
-                "receiver": "nina",
+                "id": 4,              
+                "role": "receiver",
                 "gift": "$300",
                 "messageType": "gift",
                 "time": "5 mins ago",
@@ -70,8 +65,7 @@ export const msgData: MsgDataProps[] = [
             },
             {
                 "id": 5,
-                "sender": "carlroberts",
-                "receiver": "nina",
+                "role": "receiver",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",
@@ -88,8 +82,7 @@ export const msgData: MsgDataProps[] = [
         conversation: [
             {
                 "id": 1,
-                "sender": "carlroberts",
-                "receiver": "jason",
+                "role": "sender",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",
@@ -106,8 +99,7 @@ export const msgData: MsgDataProps[] = [
         conversation: [
             {
                 "id": 1,
-                "sender": "carlroberts",
-                "receiver": "jane",
+                "role": "sender",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",
@@ -124,8 +116,7 @@ export const msgData: MsgDataProps[] = [
         conversation: [
             {
                 "id": 1,
-                "sender": "carlroberts",
-                "receiver": "dianne",
+                "role": "sender",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",
@@ -142,8 +133,7 @@ export const msgData: MsgDataProps[] = [
         conversation: [
             {
                 "id": 1,
-                "sender": "carlroberts",
-                "receiver": "maryliu",
+                "role": "sender",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",
@@ -160,8 +150,7 @@ export const msgData: MsgDataProps[] = [
         conversation: [
             {
                 "id": 1,
-                "sender": "carlroberts",
-                "receiver": "sindell",
+                "role": "sender",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",
@@ -178,8 +167,7 @@ export const msgData: MsgDataProps[] = [
         conversation: [
             {
                 "id": 1,
-                "sender": "carlroberts",
-                "receiver": "nynaeve",
+                "role": "sender",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",
@@ -196,8 +184,7 @@ export const msgData: MsgDataProps[] = [
         conversation: [
             {
                 "id": 1,
-                "sender": "carlroberts",
-                "receiver": "sheilla",
+                "role": "sender",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",

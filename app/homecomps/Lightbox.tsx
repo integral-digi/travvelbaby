@@ -29,7 +29,7 @@ const Lightbox = ({ media, isOpen, setIsOpen }: LightboxProps) => {
   }, [isOpen]);
 
   return (
-    <div className="w-full lg:justify-center lg:m-auto h-screen bg-zinc-800">
+    <div className="w-full lg:justify-center lg:w-screen h-screen lg:left-0 bg-zinc-800">
       {isOpen && (
         <div className="fixed top-0 w-[50%] h-fit flex items-center justify-center z-50 aspect-auto m-auto lg:w-full lg:h-full lg:block">
           

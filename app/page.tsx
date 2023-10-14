@@ -8,7 +8,7 @@ import MobileNav from "./homecomps/MobileNav";
 const Home = () => {
   return (
     <body className="bg-white">
-      <div className="top-0 w-full lg:hidden">
+      <div className="top-0 w-full lg:hidden z-30">
         <MainNav />
       </div>
       <div className="flex w-full h-full relative justify-between pt-6">

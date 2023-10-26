@@ -9,8 +9,8 @@ export interface NavProps {
 }
 
 interface UserProps {
+    fullName: string;
     name: string;
-    username: string;
     email: string;
     website: string;
     bio: string;
@@ -19,7 +19,6 @@ interface UserProps {
     followerCount: number;
     followingCount: number;
     postCount: number;
-    [key: string]: any;
 }
 
 const navItems: NavProps[] = [
@@ -36,8 +35,8 @@ const navItems: NavProps[] = [
 ];
 
 export const user: UserProps = {
-    name: "Carl Roberts",
-    username: "carlroberts",
+    fullName: "Carl Roberts",
+    name: "carlroberts",
     email: "carlroberts@hotmail.com",
     website: "https://carlroberts.com",
     bio: "On-air personality, author, and entrepreneur.",

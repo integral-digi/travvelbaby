@@ -34,7 +34,10 @@ const config: Config = {
       }
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [
+    require('flowbite/plugin'),
+    require('@headlessui/react')
+  ]
 };
  
 export default config

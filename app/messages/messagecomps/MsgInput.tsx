@@ -13,13 +13,6 @@ const MessageInput = () => {
     return (
         <div className="message-input relative">
             <hr className='border-gray-400 border-opacity-20 w-full' />
-            <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Type a message..."
-                className='border-none w-full h-16 px-4 py-2 text-sm font-normal focus:outline-none'
-            />
             <div className='absolute right-4 top-4 flex items-center space-x-3 z-50'>
                 <span className='flex items-center space-x-3'>
                     <img src="/assets/emoji.svg" alt="emoji" className='w-5 h-5' />
@@ -32,6 +25,13 @@ const MessageInput = () => {
                     </p>
                 </button>
             </div>
+            <input
+                type="text"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Type a message..."
+                className='border-none w-full h-16 px-4 py-2 text-sm font-normal focus:outline-none'
+            />
         </div>
     );
 };

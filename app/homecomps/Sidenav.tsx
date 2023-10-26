@@ -1,28 +1,47 @@
 import Link from "next/link";
 import { useMemo } from "react";
 
-interface NavProps {
+export interface NavProps {
     name: string;
     label: string;
     href: string;
     isActive: boolean;
 }
 
+interface UserProps {
+    name: string;
+    username: string;
+    email: string;
+    website: string;
+    bio: string;
+    location: string;
+    avatar: string;
+    followerCount: number;
+    followingCount: number;
+    postCount: number;
+    [key: string]: any;
+}
+
 const navItems: NavProps[] = [
     {name: "/assets/feed.svg", label: "Feed", href: "/",  isActive: false},
-    {name: "/assets/explore.svg", label: "Explore", href: "#", isActive: false},
+    {name: "/assets/explore.svg", label: "Explore", href: "/explore", isActive: false},
     {name: "/assets/traveler.svg", label: "Travelers", href: "#", isActive: false},
     {name: "/assets/notification.svg", label: "Notification", href: "#", isActive: false},
-    {name: "/assets/save.svg", label: "Saved", href: "#", isActive: false},
+    {name: "/assets/save.svg", label: "Saved", href: "/saved", isActive: false},
     {name: "/assets/shop.svg", label: "Shop", href: "#", isActive: false},
-    {name: "/assets/earnings.svg", label: "Earnings", href: "earnings", isActive: false},
-    {name: "/assets/settings.svg", label: "Settings", href: "#", isActive: false},
+    {name: "/assets/earnings.svg", label: "Earnings", href: "/earnings", isActive: false},
+    {name: "/assets/settings.svg", label: "Settings", href: "/settings", isActive: false},
     {name: "/assets/help.svg", label: "Help", href: "#", isActive: false},
     {name: "/assets/logout.svg", label: "Logout", href: "#", isActive: false}
 ];
 
-export const user = {
-    name: "carlroberts",
+export const user: UserProps = {
+    name: "Carl Roberts",
+    username: "carlroberts",
+    email: "carlroberts@hotmail.com",
+    website: "https://carlroberts.com",
+    bio: "On-air personality, author, and entrepreneur.",
+    location: "Ontario, Canada",
     avatar: "/media/1u.jpg",
     followerCount: 10,
     followingCount: 20,
@@ -43,11 +62,11 @@ const Sidenav = () => {
     
     return (
         <nav className="bg-neutral-50 h-full">
-            <div className="space-y-20">
+            <div className="space-y-20 pt-6">
                 <div className="block space-y-10 px-12">
                     <div className="justify-center space-y-4">
                         <img src={user.avatar} alt="avatar" className="rounded-full w-12 h-12 justify-center mx-auto" />
-                        <p className="text-zinc-800 text-sm text-center font-normal">@{user.name}</p>
+                        <p className="text-zinc-800 text-sm text-center font-normal">@{user.username}</p>
                     </div>
                     <div className="flex items-center justify-between space-x-1">
                         <span className="space-y-1">

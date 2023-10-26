@@ -6,10 +6,10 @@ const MsgBody = ({ id }: any) => {
     <div className="w-full h-fit border-l border-gray-400 border-opacity-20"> 
       <div className="w-full h-full pt-8 px-8 pb-4 space-y-4">
         {msgData[id].conversation.map((msg) => (
-          <div key={msg.id} className="w-[60%] h-auto space-y-4">  
-            <div className={msg.role === "receiver" ? "w-fit space-y-4 float-left, left-0, clear-both" : "w-fit float-right, right-0, clear-both"}>
+          <div key={msg.id} className="w-[60%] h-auto space-y-4 lg:w-[90%]">  
+            <div className={msg.role === "receiver" ? "w-fit space-y-4 float-left left-0 clear-both" : "w-fit clear-both"}>
               {Array.isArray(msg.message) ? ( // Checking if this is an image array
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-4 overflow-x-scroll">
                   {msg.message.map((image, imgIndex) => (
                     <div key={imgIndex} className="object-cover w-72 h-64">
                       <img src={image} alt={`image-${imgIndex}`} className="w-full h-full rounded-xl" />

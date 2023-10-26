@@ -1,6 +1,6 @@
 /**
  * @description
- * This is the data for the messages component
+ * This is the source for the messages component
  * 
  * @returns {MsgDataProps[]}
  * 
@@ -21,16 +21,20 @@ interface MsgDataProps {
         time: string;
         isRead: boolean;
     }[];
+    lastMsg: string;
+    isActive: boolean;
+    unreadCount: number;
 }
 
 export const msgData: MsgDataProps[] = [
     {
         id: 1,
         name: "nina",
-        avatar: "/media/3u.jpg",
+        avatar: "/media/2u.jpg",
         isTyping: true,
         lastSeen: "Active now",
         conversation: [
+            // ... (your conversation data here)
             {
                 "id": 1,
                 "role": "sender",
@@ -71,58 +75,73 @@ export const msgData: MsgDataProps[] = [
                 "time": "5 mins ago",
                 "isRead": true,
             },
-        ]
+        ],
+        lastMsg: "Hi, how you doing today? I just supported your getaway with.....",
+        isActive: true,
+        unreadCount: 3
     },
     {
         id: 2,
         name: "jason",
-        avatar: "/media/2u.jpg",
-        isTyping: false,
-        lastSeen: "5 mins ago",
+        avatar: "/media/avatar.jpg",
+        isTyping: true,
+        lastSeen: "Active now",
         conversation: [
+            // ... (jason's conversation data here)
             {
                 "id": 1,
                 "role": "sender",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",
-                "isRead": true,
-            },
-        ]
+                "isRead": false,
+            }
+        ],
+        lastMsg: "Hi, how you doing today? I just supported your getaway with.....",
+        isActive: true,
+        unreadCount: 0
     },
     {
         id: 3,
         name: "jane",
+        avatar: "/media/9u.jpg",
+        isTyping: false,
+        lastSeen: "5 mins ago",
+        conversation: [
+            // ... (jane's conversation data here)
+            {
+                "id": 1,
+                "role": "sender",
+                "message": "Hey, I love you, I wanna see you go to Maldives.",
+                "messageType": "text",
+                "time": "5 mins ago",
+                "isRead": false,
+            }
+        ],
+        lastMsg: "Hi, how you doing today? I just supported your getaway with.....",
+        isActive: false,
+        unreadCount: 1
+    },
+    {
+        id: 4,
+        name: "sheilla",
         avatar: "/media/3u.jpg",
         isTyping: false,
         lastSeen: "5 mins ago",
         conversation: [
+            // ... (dianne's conversation data here)
             {
                 "id": 1,
                 "role": "sender",
                 "message": "Hey, I love you, I wanna see you go to Maldives.",
                 "messageType": "text",
                 "time": "5 mins ago",
-                "isRead": true,
-            },
-        ]
-    },
-    {
-        id: 4,
-        name: "dianne",
-        avatar: "/media/4u.jpg",
-        isTyping: false,
-        lastSeen: "5 mins ago",
-        conversation: [
-            {
-                "id": 1,
-                "role": "sender",
-                "message": "Hey, I love you, I wanna see you go to Maldives.",
-                "messageType": "text",
-                "time": "5 mins ago",
-                "isRead": true,
-            },
-        ]
+                "isRead": false,
+            }
+        ],
+        lastMsg: "Hi, how you doing today? I just supported your getaway with.....",
+        isActive: false,
+        unreadCount: 0
     },
     {
         id: 5,
@@ -131,6 +150,7 @@ export const msgData: MsgDataProps[] = [
         isTyping: false,
         lastSeen: "Active now",
         conversation: [
+            // ... (maryliu's conversation data here)
             {
                 "id": 1,
                 "role": "sender",
@@ -138,8 +158,11 @@ export const msgData: MsgDataProps[] = [
                 "messageType": "text",
                 "time": "5 mins ago",
                 "isRead": false,
-            },
-        ]
+            }
+        ],
+        lastMsg: "Hi, how you doing today? I just supported your getaway with.....",
+        isActive: true,
+        unreadCount: 2
     },
     {
         id: 6,
@@ -148,6 +171,7 @@ export const msgData: MsgDataProps[] = [
         isTyping: false,
         lastSeen: "5 mins ago",
         conversation: [
+            // ... (sindell's conversation data here)
             {
                 "id": 1,
                 "role": "sender",
@@ -155,16 +179,20 @@ export const msgData: MsgDataProps[] = [
                 "messageType": "text",
                 "time": "5 mins ago",
                 "isRead": false,
-            },
-        ]
+            }
+        ],
+        lastMsg: "Hi, how you doing today? I just supported your getaway with.....",
+        isActive: false,
+        unreadCount: 0
     },
     {
         id: 7,
         name: "nynaeve",
         avatar: "/media/7u.jpg",
         isTyping: false,
-        lastSeen: "5 mins ago",
+        lastSeen: "Active now",
         conversation: [
+            // ... (nynaeve's conversation data here)
             {
                 "id": 1,
                 "role": "sender",
@@ -172,16 +200,20 @@ export const msgData: MsgDataProps[] = [
                 "messageType": "text",
                 "time": "5 mins ago",
                 "isRead": false,
-            },
-        ]
+            }
+        ],
+        lastMsg: "Hi, how you doing today? I just supported your getaway with.....",
+        isActive: true,
+        unreadCount: 3
     },
     {
         id: 8,
-        name: "sheilla",
+        name: "Larry",
         avatar: "/media/8u.jpg",
         isTyping: false,
         lastSeen: "5 mins ago",
         conversation: [
+            // ... (sheilla's conversation data here)
             {
                 "id": 1,
                 "role": "sender",
@@ -189,7 +221,11 @@ export const msgData: MsgDataProps[] = [
                 "messageType": "text",
                 "time": "5 mins ago",
                 "isRead": false,
-            },
-        ]
+            }
+
+        ],
+        lastMsg: "Hi, how you doing today? I just supported your getaway with.....",
+        isActive: false,
+        unreadCount: 0
     },
 ];

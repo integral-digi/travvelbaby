@@ -4,6 +4,7 @@ import { EllipsisHorizontalIcon } from "@heroicons/react/20/solid";
 import HeartIcon from "@/public/assets/HeartIcon";
 
 interface PostProps {
+    id: number;
     name: string;
     avatar: string;
     time: string;
@@ -16,10 +17,10 @@ interface PostProps {
 }
 
 const recentUpdates: PostProps[] = [
-    {name: "jason", avatar: "/media/avatar.jpg", time: "2 hrs ago", type: "photo", photo: "/media/photo2.jpg", caption: "Cultural immersion at its finest. From trying exotic dishes at local markets to participating in traditional ceremonies, I've embraced every opportunity to connect with the culture here. Travel is the best teacher. 🌍 #TravelGoals #LocalFlavors #CulturalImmersion", likes: 10, comments: 2},
-    {name:"nina", avatar: "/media/2u.jpg", time: "3 hrs ago", type: "photo", photo: "/media/photo1.jpg", caption: "Every corner of this city is a work of art waiting to be discovered. 🎨 #StreetArt #UrbanExploration", likes: 10, comments: 2},
-    {name:"sheilla", avatar: "/media/3u.jpg", time: "4 hrs ago", type: "video", video: "/media/video1.mp4", caption: "Sunsets like these make me appreciate the simple joys of life. 🌅 #NatureLover #SunsetMagic", likes: 10, comments: 2},
-    {name: "maryliu", avatar: "/media/6u.jpg", time: "4 hrs ago", type: "photo", photo: "/media/photo3.jpg", caption: "I've been dreaming of visiting this place for years, and it's even more stunning than I imagined. 🏞 #NatureLover #BucketList", likes: 10, comments: 2},
+    {id: 1, name: "jason", avatar: "/media/avatar.jpg", time: "2 hrs ago", type: "photo", photo: "/media/photo2.jpg", caption: "Cultural immersion at its finest. From trying exotic dishes at local markets to participating in traditional ceremonies, I've embraced every opportunity to connect with the culture here. Travel is the best teacher. 🌍 #TravelGoals #LocalFlavors #CulturalImmersion", likes: 10, comments: 2},
+    {id: 2, name:"nina", avatar: "/media/2u.jpg", time: "3 hrs ago", type: "photo", photo: "/media/photo1.jpg", caption: "Every corner of this city is a work of art waiting to be discovered. 🎨 #StreetArt #UrbanExploration", likes: 10, comments: 2},
+    {id: 3, name:"sheilla", avatar: "/media/3u.jpg", time: "4 hrs ago", type: "video", video: "/media/video1.mp4", caption: "Sunsets like these make me appreciate the simple joys of life. 🌅 #NatureLover #SunsetMagic", likes: 10, comments: 2},
+    {id: 4, name: "maryliu", avatar: "/media/6u.jpg", time: "4 hrs ago", type: "photo", photo: "/media/photo3.jpg", caption: "I've been dreaming of visiting this place for years, and it's even more stunning than I imagined. 🏞 #NatureLover #BucketList", likes: 10, comments: 2},
 ];
 
 const formatCaption = (caption: string) => {
@@ -44,8 +45,8 @@ const Posts = () => {
     return (
         <div className="posts">
             <div className="entries space-y-6">
-                {recentUpdates.map((entry, index) => (
-                    <div className="entry block items-center space-y-8" key={index}>
+                {recentUpdates.map((entry) => (
+                    <div className="entry block items-center space-y-8" key={entry.id}>
                         <div className="flex items-center justify-between">
                             <div className="flex space-x-4 items-center w-full">
                                 <img src={entry.avatar} alt="avatar" className="rounded-full w-12 h-12 justify-center" />

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "flowbite-react": "^0.6.4",
     "fslightbox-react": "^1.7.6",

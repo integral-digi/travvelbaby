@@ -1,35 +1,6 @@
 import { EllipsisHorizontalIcon, UserPlusIcon } from "@heroicons/react/20/solid"
 
-export const user = {
-    name: "Sheilla Brian",
-    avatar: "/media/3u.jpg",
-    cover: "/media/cover.jpg",
-    bio: "“Model based out of New York. Follow my adventure as I travel the globe.“",
-    followers: 100,
-    following: 100,
-    posts: 100,
-    subscribers: 100,
-    photoCount: 100,
-    videos: 100,
-    about: {
-        work: "Model @ Fashion Nova",
-        followedBy: "nina, jason, maryliu, +30 others",
-    },
-    isVerified: true,
-    photos: [
-        "/media/10u.jpg",
-        "/media/11u.jpg",
-        "/media/12u.jpg",
-        "/media/photo4.jpg",
-        "/media/2u.jpg",
-        "/media/photo6.jpg",
-        "/media/photo7.jpg",
-        "/media/photo8.jpg",
-        "/media/13u.jpg",
-    ],
-}
-
-const UserBio = () => {
+const UserBio = ({user}: any) => {
     return (
         <div className="user-bio w-full space-y-8 top-0">
             <div className="block space-y-4 w-full">

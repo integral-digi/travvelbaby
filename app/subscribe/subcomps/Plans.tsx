@@ -19,46 +19,54 @@ const plans: PlanProps[] = [
 const SubscriptionPlans = () => {
     return (
         <div className="">
-            <div className="">
-                <h2 className="">Upgrade and get so much more</h2>
-            </div>
             <div className="pt-16">
-                <Tab.Group>
-                    <Tab.List className="">
-                       <Tab className="">Monthly</Tab>
-                       <Tab className="">Yearly</Tab>
-                    </Tab.List> 
-                    <Tab.Panels className="">
+                <Tab.Group >
+                    <section className="flex items-center justify-between w-full">
+                        <div className="">
+                            <h2 className="text-stone-500 text-4xl font-black leading-10">Upgrade and get so much more</h2>
+                        </div>
+                        <Tab.List className="">
+                            <Tab className="">Monthly</Tab>
+                            <Tab className="">Yearly</Tab>
+                        </Tab.List> 
+                    </section>
+                    <Tab.Panels className="pt-36">
                        <Tab.Panel className="space-y-12">
                             {plans.map((plan)=>(
-                                <div key={plan.id} className="w-full flex justify-between">
-                                    <p className="w-[20%]">{plan.name}</p>
-                                    <ul className="w-[40%]">
-                                        {plan.description.map((item, index)=>(
-                                            <li key={index} className="">{item}</li>
-                                        ))}
-                                    </ul>
-                                    <p className="w-[20%]">{plan.monthlyPrice}</p>
-                                    <button className="w-[20%]">
-                                        <p className="">Get Now</p>
-                                    </button>
-                                </div>
+                                <>
+                                    <div key={plan.id} className="w-full flex justify-between">
+                                        <p className="w-[20%]text-slate-700 text-base font-normal">{plan.name}</p>
+                                        <ul className="w-[40%]">
+                                            {plan.description.map((item, index)=>(
+                                                <li key={index} className="text-slate-700 text-base font-normal">{item}</li>
+                                            ))}
+                                        </ul>
+                                        <p className="w-[20%] text-right text-blue-950 text-5xl font-secondary leading-loose">{plan.monthlyPrice}</p>
+                                        <button className="w-[20%]">
+                                            <p className="">Get Now</p>
+                                        </button>
+                                    </div>
+                                    <hr className="w-full h-px bg-zinc-300" />
+                                </>
                             ))}
                        </Tab.Panel>
                        <Tab.Panel className="space-y-12">
                             {plans.map((plan)=>(
-                                <div key={plan.id} className="w-full flex justify-between">
-                                    <p className="w-1/4">{plan.name}</p>
-                                    <ul className="w-1/4">
-                                        {plan.description.map((item, index)=>(
-                                            <li key={index} className="">{item}</li>
-                                        ))}
-                                    </ul>
-                                    <p className="w-1/4">{plan.annualPrice}</p>
-                                    <button className="w-1/4">
-                                        <p className="">Get Now</p>
-                                    </button>
-                                </div>
+                                <>
+                                    <div key={plan.id} className="w-full flex justify-between">
+                                        <p className="w-1/4 text-slate-700 text-base font-normal">{plan.name}</p>
+                                        <ul className="w-1/4">
+                                            {plan.description.map((item, index)=>(
+                                                <li key={index} className="text-slate-700 text-base font-normal">{item}</li>
+                                            ))}
+                                        </ul>
+                                        <p className="w-1/4">{plan.annualPrice}</p>
+                                        <button className="w-1/4">
+                                            <p className="">Get Now</p>
+                                        </button>
+                                    </div>
+                                    <hr className="w-full h-px bg-zinc-300" />
+                                </>
                             ))}
                        </Tab.Panel>
                     </Tab.Panels>

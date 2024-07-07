@@ -12,8 +12,8 @@ const tabData: tabDataProps[] = [
   { id: 1, name: "Profile Views", value: 13000 },
   { id: 2, name: "Subscribers", value: 10000 },
   { id: 3, name: "Donations", value: 5000 },
-  { id: 4, name: "Referrals", value: 4000 },
-  { id: 5 ,name: "Impressions", value: 3000 },
+  { id: 4, name: "Referrals", value: 43 },
+  { id: 5 ,name: "Impressions", value: 377202 },
 ];
 
 const data = [

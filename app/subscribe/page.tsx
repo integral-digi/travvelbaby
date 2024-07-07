@@ -7,7 +7,7 @@ const SubHome = () => {
             <div className="top-0 w-full">
                 <MainNav />
             </div>
-            <div className="w-full px-8 pt-8">
+            <div className="w-full px-16 pt-8">
                 <SubscriptionPlans />
             </div>
         </div>

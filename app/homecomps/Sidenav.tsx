@@ -65,7 +65,7 @@ const Sidenav = () => {
                 <div className="block space-y-10 px-12">
                     <div className="justify-center space-y-4">
                         <img src={user.avatar} alt="avatar" className="rounded-full w-12 h-12 justify-center mx-auto" />
-                        <p className="text-zinc-800 text-sm text-center font-normal">@{user.username}</p>
+                        <p className="text-zinc-800 text-sm text-center font-normal">@{user.name}</p>
                     </div>
                     <div className="flex items-center justify-between space-x-1">
                         <span className="space-y-1">

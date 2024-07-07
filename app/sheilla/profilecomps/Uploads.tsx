@@ -1,6 +1,6 @@
-import { user } from "./Bio";   
+import { usersData } from "./ProfileData";  
 
-const Uploads = () => {
+const Uploads = ( {user}: any ) => {
     return (
         <div className="block w-full h-full relative pt-6">
             <div className="grid grid-cols-3 gap-2">

@@ -9,7 +9,7 @@ interface ExploreDataProps {
 }
 
 const exploreData: ExploreDataProps[] = [
-    { id: 1, user: "sheilla", video: "/media/video1.mp4", likes: 15000, comments: 774, fundRaised: 203 },
+    { id: 1, user: "sheilla", photo: "/media/photo8.jpg", likes: 15000, comments: 774, fundRaised: 203 },
     { id: 2, user: "sheilla", photo: "/media/photo6.jpg", likes: 15000, comments: 774, fundRaised: 203 },
     { id: 3, user: "sheilla", photo: "/media/10u.jpg", likes: 15000, comments: 774, fundRaised: 203 },
     { id: 4, user: "sheilla", photo: "/media/11u.jpg", likes: 15000, comments: 774, fundRaised: 203 },
@@ -21,15 +21,15 @@ const exploreData: ExploreDataProps[] = [
 ]
 const ExPosts = () => {
     return (
-        <div className="inline-flex flex-wrap space-y-4 space-x-4">
+        <div className="flex flex-1 flex-wrap space-y-4 space-x-4">
             {exploreData.map((post)=>(
-                <div>
+                <div key={post.id}>
                     {
                     post.photo ? 
-                    <div key={post.id} className="w-80 h-80">
+                    <div key={post.id} className="w-96 h-96">
                         <img src={post.photo} alt={post.user}className="w-full h-full object-cover" /> 
                     </div> 
-                    :  <div key={post.id} className="w-auto h-80">
+                    :  <div key={post.id} className="w-96 h-96">
                             <video src={post.video} className="w-full h-full object-cover" />
                         </div>
                     }

@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { EllipsisHorizontalIcon } from "@heroicons/react/20/solid";
 import HeartIcon from "@/public/assets/HeartIcon";
 
@@ -36,12 +36,17 @@ const formatCaption = (caption: string) => {
 }
 
 const Posts = () => {
-    const [like, setLike] = useState(false);
+    const [likes, setLikes] = useState(recentUpdates.map(() => false));
 
-    const handleLike = () => {
-        setLike(!like);
-    }
-    
+    // Use `useCallback` to memoize the `handleLike` function
+    const handleLike = useCallback((postId: number) => {
+        setLikes((prevLikes) => {
+            const updatedLikes = [...prevLikes];
+            updatedLikes[postId - 1] = !updatedLikes[postId - 1];
+            return updatedLikes;
+        });
+    }, []);
+
     return (
         <div className="posts">
             <div className="entries space-y-6">
@@ -66,8 +71,8 @@ const Posts = () => {
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center space-x-8">
                                             <div className="flex items-center space-x-2">
-                                                <button className="w-6 h-6" onClick={handleLike}>
-                                                    <HeartIcon filled={like} />
+                                                <button className="w-6 h-6" onClick={() => handleLike(entry.id)}>
+                                                    <HeartIcon filled={likes[entry.id - 1]} /> {/* Use likes array to determine filled state */}
                                                 </button>
                                                 <p className="text-zinc-800 text-sm font-normal">{entry.likes}</p>
                                             </div>

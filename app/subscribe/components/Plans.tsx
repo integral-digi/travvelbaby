@@ -1,6 +1,6 @@
 "use client"
-import { Fragment } from "react";
-import { Tab } from "@headlessUI/react";
+// import { Fragment } from "react";
+import { Tab } from "@headlessui/react";
 
 interface PlanProps {
     id: number;

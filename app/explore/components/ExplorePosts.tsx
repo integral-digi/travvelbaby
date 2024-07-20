@@ -21,15 +21,15 @@ const exploreData: ExploreDataProps[] = [
 ]
 const ExPosts = () => {
     return (
-        <div className="flex flex-1 flex-wrap space-y-4 space-x-4">
+        <div className="flex flex-1 flex-wrap gap-4">
             {exploreData.map((post)=>(
                 <div key={post.id}>
                     {
                     post.photo ? 
-                    <div key={post.id} className="w-96 h-96">
+                    <div key={post.id} className="w-full h-96">
                         <img src={post.photo} alt={post.user}className="w-full h-full object-cover" /> 
                     </div> 
-                    :  <div key={post.id} className="w-96 h-96">
+                    :  <div key={post.id} className="w-full h-96">
                             <video src={post.video} className="w-full h-full object-cover" />
                         </div>
                     }

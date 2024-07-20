@@ -1,6 +1,6 @@
-import MainNav from "../homecomps/MainNav";
-import AccountSettings from "./setcomps/AccountSettings";
-import SettingTab from "./setcomps/SettingTab";
+import MainNav from "../components/MainNav";
+import AccountSettings from "./components/AccountSettings";
+import SettingTab from "./components/SettingTab";
 
 const SetHome = () => {
     return (

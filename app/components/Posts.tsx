@@ -2,6 +2,7 @@
 import { useCallback, useState } from "react";
 import { EllipsisHorizontalIcon } from "@heroicons/react/20/solid";
 import HeartIcon from "@/public/assets/HeartIcon";
+import { useRouter } from "next/navigation";
 
 interface PostProps {
     id: number;
@@ -36,6 +37,7 @@ const formatCaption = (caption: string) => {
 }
 
 const Posts = () => {
+    const router = useRouter();
     const [likes, setLikes] = useState(recentUpdates.map(() => false));
 
     // Use `useCallback` to memoize the `handleLike` function
@@ -54,9 +56,18 @@ const Posts = () => {
                     <div className="entry block items-center space-y-8" key={entry.id}>
                         <div className="flex items-center justify-between">
                             <div className="flex space-x-4 items-center w-full">
-                                <img src={entry.avatar} alt="avatar" className="rounded-full w-12 h-12 justify-center" />
-                                <p className="text-zinc-800 text-sm font-normal">{entry.name}</p>
-                                <p className="text-stone-500 text-sm font-normal">{entry.time}</p>
+                                <img 
+                                    src={entry.avatar} 
+                                    alt="avatar" 
+                                    className="rounded-full w-12 h-12 justify-center cursor-pointer" 
+                                    onClick={()=>router.push(`/${entry.name}`)}
+                                />
+                                <p className="text-zinc-800 text-sm font-normal">
+                                    {entry.name}
+                                </p>
+                                <p className="text-stone-500 text-sm font-normal">
+                                    {entry.time}
+                                </p>
                             </div>
                             <span className="w-6 h-6">
                                 <EllipsisHorizontalIcon />
@@ -64,8 +75,21 @@ const Posts = () => {
                         </div>
                         <div className="block space-y-8">
                             <div className="space-y-8">
-                                <div className="block">
-                                    {entry.type === "photo" ? <img src={entry.photo} alt="photo" className="w-full h-auto" />: <video src={entry.video} className="w-full h-auto" aria-controls="full"  />}
+                                <div className="block cursor-pointer">
+                                    {
+                                        entry.type === "photo" ? 
+                                        <img 
+                                            src={entry.photo} 
+                                            alt="photo" 
+                                            className="w-full h-auto" 
+                                        />
+                                        : 
+                                        <video 
+                                            src={entry.video} 
+                                            className="w-full h-auto" 
+                                            aria-controls="full"  
+                                        />
+                                    }
                                 </div>
                                 <div className="block space-y-8">
                                     <div className="flex items-center justify-between">

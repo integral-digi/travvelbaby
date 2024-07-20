@@ -1,6 +1,6 @@
-import MainNav from "../homecomps/MainNav";
-import MobileNav from "../homecomps/MobileNav";
-import Sidenav from "../homecomps/Sidenav";
+import MainNav from "../components/MainNav";
+import MobileNav from "../components/MobileNav";
+import Sidenav from "../components/Sidenav";
 
 const SavedHome = () => {
     return (

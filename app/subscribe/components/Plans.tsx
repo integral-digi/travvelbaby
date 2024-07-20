@@ -11,7 +11,7 @@ interface PlanProps {
 }
 
 const plans: PlanProps[] = [
-    { id: 1, name: "Free", description: ["Unlimited Access to Trips, Shop", "Feed Interaction"], monthlyPrice: 9.99, annualPrice: 99.99 },
+    { id: 1, name: "Free", description: ["Unlimited Access to Trips", "Shop", "Feed Interaction"], monthlyPrice: 9.99, annualPrice: 99.99 },
     { id: 2, name: "VIP", description: ["Includes all in the Pro Plan", "Priority Messaging"], monthlyPrice: 24.99, annualPrice: 249.99 },
     { id: 3, name: "Elite", description: ["Priority Messaging", "1 on 1 Live Feature", "Exclusive Invite to travvelbaby events"] , monthlyPrice: 49.99, annualPrice: 499.99 },
 ];
@@ -25,9 +25,9 @@ const SubscriptionPlans = () => {
                         <div className="">
                             <h2 className="text-stone-500 text-4xl font-black leading-10">Upgrade and get so much more</h2>
                         </div>
-                        <Tab.List className="">
-                            <Tab className="">Monthly</Tab>
-                            <Tab className="">Yearly</Tab>
+                        <Tab.List className="flex items-center space-x-6">
+                            <Tab className="font-primary">Monthly</Tab>
+                            <Tab className="font-primary">Yearly</Tab>
                         </Tab.List> 
                     </section>
                     <Tab.Panels className="pt-36">
@@ -35,14 +35,20 @@ const SubscriptionPlans = () => {
                             {plans.map((plan)=>(
                                 <>
                                     <div key={plan.id} className="w-full flex justify-between">
-                                        <p className="w-[20%]text-slate-700 text-base font-normal">{plan.name}</p>
+                                        <p className="w-1/5 text-slate-700 text-base font-normal">
+                                            {plan.name}
+                                        </p>
                                         <ul className="w-[40%]">
                                             {plan.description.map((item, index)=>(
-                                                <li key={index} className="text-slate-700 text-base font-normal">{item}</li>
+                                                <li key={index} className="text-slate-700 text-base font-normal">
+                                                    {item}
+                                                </li>
                                             ))}
                                         </ul>
-                                        <p className="w-[20%] text-right text-blue-950 text-5xl font-secondary leading-loose">{plan.monthlyPrice}</p>
-                                        <button className="w-[20%]">
+                                        <p className="w-1/5 text-right text-blue-950 text-5xl font-secondary leading-loose">
+                                            {plan.monthlyPrice}
+                                        </p>
+                                        <button className="w-1/5 text-base font-secondary underline">
                                             <p className="">Get Now</p>
                                         </button>
                                     </div>
@@ -54,14 +60,18 @@ const SubscriptionPlans = () => {
                             {plans.map((plan)=>(
                                 <>
                                     <div key={plan.id} className="w-full flex justify-between">
-                                        <p className="w-1/4 text-slate-700 text-base font-normal">{plan.name}</p>
-                                        <ul className="w-1/4">
+                                        <p className="w-1/5 text-slate-700 text-base font-normal">
+                                            {plan.name}
+                                        </p>
+                                        <ul className="w-[40%]">
                                             {plan.description.map((item, index)=>(
                                                 <li key={index} className="text-slate-700 text-base font-normal">{item}</li>
                                             ))}
                                         </ul>
-                                        <p className="w-1/4">{plan.annualPrice}</p>
-                                        <button className="w-1/4">
+                                        <p className="w-1/5 text-right text-blue-950 text-5xl font-secondary leading-loose">
+                                            {plan.annualPrice}
+                                        </p>
+                                        <button className="w-1/5  text-base font-secondary underline">
                                             <p className="">Get Now</p>
                                         </button>
                                     </div>

@@ -42,8 +42,6 @@ export const formatNumbers = (numCount: number) => {
 };
 
 
-console.log(formatNumbers(125675));
-
 export const usersData: UsersDataProps[] = [
     {
         id: 1,
@@ -105,6 +103,94 @@ export const usersData: UsersDataProps[] = [
             "/media/13u.jpg",
         ],
     },
-
-]
-
+    {
+        id: 3,
+        username: "nina",
+        name: "Nina",
+        avatar: "/media/2u.jpg",
+        cover: "/media/cover.jpg",
+        bio: "“Model based out of New York. Follow my adventure as I travel the globe.“",
+        followers: 100,
+        following: 100,
+        posts: 100,
+        subscribers: 100,
+        photoCount: 100,
+        videos: 100,
+        about: {
+            work: "Model @ Fashion Nova",
+            followedBy: "nina, jason, maryliu, +30 others",
+        },
+        isVerified: true,
+        photos: [
+            "/media/10u.jpg",
+            "/media/11u.jpg",
+            "/media/12u.jpg",
+            "/media/photo4.jpg",
+            "/media/2u.jpg",
+            "/media/photo6.jpg",
+            "/media/photo7.jpg",
+            "/media/photo8.jpg",
+            "/media/13u.jpg",
+        ],
+    },
+    {
+        id: 4,
+        username: "john",
+        name: "John Doe",
+        avatar: "/media/1u.jpg",
+        cover: "/media/cover.jpg",
+        bio: "“Model based out of New York. Follow my adventure as I travel the globe.“",
+        followers: 100,
+        following: 100,
+        posts: 100,
+        subscribers: 100,
+        photoCount: 100,
+        videos: 100,
+        about: {
+            work: "Model @ Fashion Nova",
+            followedBy: "nina, jason, maryliu, +30 others",
+        },
+        isVerified: true,
+        photos: [
+            "/media/10u.jpg",
+            "/media/11u.jpg",
+            "/media/12u.jpg",
+            "/media/photo4.jpg",
+            "/media/2u.jpg",
+            "/media/photo6.jpg",
+            "/media/photo7.jpg",
+            "/media/photo8.jpg",
+            "/media/13u.jpg",
+        ],
+    },
+    {
+        id: 5,
+        username: "jason",
+        name: "Jason Smith",
+        avatar: "/media/avatar.jpg",
+        cover: "/media/cover.jpg",
+        bio: "“Photographer and Filmmaker based in LA. Capturing moments one shot at a time.“",
+        followers: 50000,
+        following: 300,
+        posts: 250,
+        subscribers: 2000,
+        photoCount: 150,
+        videos: 50,
+        about: {
+            work: "Photographer @ Freelance",
+            followedBy: "sheilla, maryliu, nina, +50 others",
+        },
+        isVerified: false,
+        photos: [
+            "/media/10u.jpg",
+            "/media/11u.jpg",
+            "/media/12u.jpg",
+            "/media/photo4.jpg",
+            "/media/2u.jpg",
+            "/media/photo6.jpg",
+            "/media/photo7.jpg",
+            "/media/photo8.jpg",
+            "/media/13u.jpg",
+        ],
+    },
+];

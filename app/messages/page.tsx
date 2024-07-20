@@ -1,9 +1,9 @@
 "use client"
 import { useState } from "react";
-import MainNav from "@/app/homecomps/MainNav";
-import MsgSidebar from "./messagecomps/MsgSidebar";
-import MsgBody from "./messagecomps/MsgBody";
-import MsgHeader from "./messagecomps/MsgHeader";
+import MainNav from "@/app/components/MainNav";
+import MsgSidebar from "./components/MsgSidebar";
+import MsgBody from "./components/MsgBody";
+import MsgHeader from "./components/MsgHeader";
 
 const Message = () => {
     const [id, setId] = useState(0);

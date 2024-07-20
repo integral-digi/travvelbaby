@@ -1,6 +1,6 @@
-import MainNav from "../homecomps/MainNav"
-import SuggestedActs from "../homecomps/Suggestions"
-import ExPosts from "./explorecomps/ExplorePosts"
+import MainNav from "../components/MainNav"
+import SuggestedActs from "../components/Suggestions"
+import ExPosts from "./components/ExplorePosts"
 
 const ExHome = () => {
     return (

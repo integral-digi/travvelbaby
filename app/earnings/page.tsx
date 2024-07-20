@@ -1,9 +1,9 @@
-import MainNav from "../homecomps/MainNav"
-import MobileNav from "../homecomps/MobileNav"
-import Sidenav from "../homecomps/Sidenav"
-import Overview from "./earningcomp/Overview"
-import PlannedTrips from "./earningcomp/PlannedTrips"
-import Visualization from "./earningcomp/Visualization"
+import MainNav from "../components/MainNav"
+import MobileNav from "../components/MobileNav"
+import Sidenav from "../components/Sidenav"
+import Overview from "./components/Overview"
+import PlannedTrips from "./components/PlannedTrips"
+import Visualization from "./components/Visualization"
 
 const Earnings = () => {
     return (

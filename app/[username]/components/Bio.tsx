@@ -1,9 +1,14 @@
-import { EllipsisHorizontalIcon, UserPlusIcon } from "@heroicons/react/20/solid"
+import { EllipsisHorizontalIcon, UserPlusIcon } from "@heroicons/react/20/solid";
+import { UsersDataProps } from "./ProfileData";
 
-const UserBio = ({user}: any) => {
+interface UserBioProps {
+    user: UsersDataProps;
+}
+
+const UserBio: React.FC<UserBioProps> = ({ user }) => {
     return (
         <div className="user-bio w-full space-y-8 top-0">
-            <div className="block space-y-4 w-full">
+            <div className="space-y-4 w-full">
                 <img src={user.cover} alt="cover" className="w-full h-72 object-cover" />
             </div>
             <div className="block space-y-4 mx-auto relative px-24">

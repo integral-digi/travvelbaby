@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useMemo } from "react";
-import { NavProps } from "@/app/homecomps/Sidenav";
+import { NavProps } from "@/app/components/Sidenav";
 
 const tabItems: NavProps[] = [
     {name: "/assets/traveler.svg", label: "Profile Information", href: "/settings/profile",  isActive: false},
@@ -15,7 +15,7 @@ const tabItems: NavProps[] = [
 const SettingTab = () => {
     const memoTabItems = useMemo(() => {
         return tabItems.map((item, index) => (
-            <div className="block space-y-10" key={index}>
+            <div className="flex flex-col space-y-10" key={index}>
                 <Link href={item.href} passHref className="flex items-center space-x-4">
                     <img src={item.name} alt="home" className="w-5 h-5" />
                     <p className="text-zinc-800 text-sm font-normal">{item.label}</p>

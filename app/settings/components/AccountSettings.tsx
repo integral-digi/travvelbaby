@@ -1,4 +1,4 @@
-import { user } from "@/app/homecomps/Sidenav";
+import { user } from "@/app/components/Sidenav";
 
 const accountLabels =[
     "Name", "Username", "Email", "Website", "Bio", "Location",
@@ -11,7 +11,7 @@ const AccountSettings = () => {
     return (
         <div className="space-y-10">
             <section className="space-y-8">
-                <h2 className="text-zinc-800 text-2xl font-secondary">Account Settings</h2>
+                <h2 className="text-zinc-800 text-2xl font-secondary">Profile Information</h2>
             </section>
             <section className="w-full space-y-10">
                 <span className="flex items-center justify-between">

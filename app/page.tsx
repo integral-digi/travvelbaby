@@ -1,9 +1,9 @@
-import Posts from "./homecomps/Posts";
-import ReelLife from "./homecomps/ReelLife";
-import Sidenav from "./homecomps/Sidenav";
-import SuggestedActs from "./homecomps/Suggestions";
-import MainNav from "./homecomps/MainNav";
-import MobileNav from "./homecomps/MobileNav";
+import Posts from "./components/Posts";
+import ReelLife from "./components/ReelLife";
+import Sidenav from "./components/Sidenav";
+import SuggestedActs from "./components/Suggestions";
+import MainNav from "./components/MainNav";
+import MobileNav from "./components/MobileNav";
 
 const Home = () => {
   return (

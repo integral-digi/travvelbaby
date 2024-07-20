@@ -1,5 +1,5 @@
-import MainNav from "../homecomps/MainNav"
-import SubscriptionPlans from "./subcomps/Plans"
+import MainNav from "../components/MainNav"
+import SubscriptionPlans from "./components/Plans"
 
 const SubHome = () => {
     return (

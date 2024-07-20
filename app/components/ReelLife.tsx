@@ -38,18 +38,22 @@ const ReelLife = () => {
     Boolean(entry.photo || entry.video);
 
   return (
-    <div className="reel-life w-full space-y-8">
+    <div className="reel-life w-full space-y-8 overflow-hidden">
       <div className="flex items-center justify-between top-0">
         <p className="text-zinc-800 text-sm font-normal">Reel Life</p>
         <p className="text-stone-500 text-sm font-normal">Watch All</p>
       </div>
-      <div className="entries flex items-center justify-between lg:overflow-x-scroll">
+      <div className="entries flex items-center justify-between md:space-x-6 lg:overflow-x-scroll">
         {recentEntries.filter(hasMedia).map((entry, index) => (
           <div className="entry" key={`${entry.name}-${entry.type}`}>
-            <div className="block justify-center items-center lg:space-x-4">
+            <div className="flex flex-col justify-center items-center">
               <span className="w-24 h-24 rounded-full border-stone-500 border-4 flex items-center lg:w-20 lg:h-20">
                 <button className="w-full h-full" onClick={() => toggleLightbox(index)}>
-                  <img src={entry.avatar} alt="avatar" className="rounded-full w-20 h-20 justify-center mx-auto my-auto lg:w-16 lg:h-16" />
+                  <img 
+                    src={entry.avatar} 
+                    alt="avatar" 
+                    className="rounded-full w-20 h-20 justify-center mx-auto my-auto lg:w-16 lg:h-16" 
+                  />
                 </button>
               </span>
               <p className="justify-center text-center font-normal">{entry.name}</p>

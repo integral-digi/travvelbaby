@@ -6,7 +6,7 @@ const suggestedUsers = [
     {name: "maryliu", avatar: "/media/6u.jpg", description: "Interacts with your content"},
     {name: "nina", avatar: "/media/2u.jpg", description: "Followed by your followers"},
     {name: "sheilla", avatar: "/media/3u.jpg", description: "Follows you"},
-    {name: "john", avatar: "/media/1u.jpg", description: "Followed by your followers"},
+    {name: "alice", avatar: "/media/alice.jpg", description: "Followed by your followers"},
 ];
 
 const SuggestedActs = () => {
@@ -22,7 +22,9 @@ const SuggestedActs = () => {
                             <div className="flex items-center justify-between">
                                 <div className="">
                                     <Link href={`/${entry.name}`} className="flex items-center justify-center space-x-3">
-                                        <img src={entry.avatar} alt="avatar" className="rounded-full w-8 h-8 justify-center mx-auto my-auto" />
+                                        <div className="w-8 h-8 rounded-full">
+                                            <img src={entry.avatar} alt="avatar" className="rounded-full w-full h-full justify-center mx-auto my-auto object-cover" />
+                                        </div>
                                         <span className="">
                                             <p className="font-normal">{entry.name}</p>
                                             <p className="text-stone-500 text-xs font-normal">{entry.description}</p>

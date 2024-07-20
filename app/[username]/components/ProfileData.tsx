@@ -19,29 +19,6 @@ export interface UsersDataProps {
     photos: string[];
 }
 
-export const formatNumbers = (numCount: number) => {
-    let formattedNumber: string;
-    const roundedCount = Math.round(numCount);
-
-    switch (true) {
-        case numCount >= 10000 && numCount < 100000:
-            formattedNumber = `${roundedCount}K`;
-            break;
-        case numCount >= 100000 && numCount < 1000000:
-            formattedNumber = `${(roundedCount / 1000).toFixed(1)}K`;
-            break;
-        case numCount >= 1000000 && numCount < 100000000:
-            formattedNumber = `${(roundedCount / 1000000).toFixed(1)}M`;
-            break;
-        default:
-            formattedNumber = `${(roundedCount / 1000000000).toFixed(1)}B`;
-            break;
-    }
-
-    return formattedNumber;
-};
-
-
 export const usersData: UsersDataProps[] = [
     {
         id: 1,
@@ -135,12 +112,12 @@ export const usersData: UsersDataProps[] = [
     },
     {
         id: 4,
-        username: "john",
-        name: "John Doe",
-        avatar: "/media/1u.jpg",
+        username: "alice",
+        name: "Alice Hernandez",
+        avatar: "/media/alice.jpg",
         cover: "/media/cover.jpg",
-        bio: "“Model based out of New York. Follow my adventure as I travel the globe.“",
-        followers: 100,
+        bio: "Influencer, Globe trotter.",
+        followers: 3000330,
         following: 100,
         posts: 100,
         subscribers: 100,

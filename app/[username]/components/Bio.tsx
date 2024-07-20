@@ -1,5 +1,6 @@
 import { EllipsisHorizontalIcon, UserPlusIcon } from "@heroicons/react/20/solid";
 import { UsersDataProps } from "./ProfileData";
+import { formatCount } from "@/utils/formatCount"; 
 
 interface UserBioProps {
     user: UsersDataProps;
@@ -13,7 +14,9 @@ const UserBio: React.FC<UserBioProps> = ({ user }) => {
             </div>
             <div className="block space-y-4 mx-auto relative px-24">
                 <div className="-mt-24 w-40 h-40 rounded-full bg-white flex items-center justify-center mx-auto">
-                    <img src={user.avatar} alt="avatar" className="rounded-full w-36 h-36 mx-auto my-auto" />
+                    <div className="w-36 h-36 rounded-full">
+                        <img src={user.avatar} alt="avatar" className="rounded-full w-full h-full object-cover mx-auto my-auto" />
+                    </div>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
                     <p className="font-normal">{user.name}</p>
@@ -40,11 +43,11 @@ const UserBio: React.FC<UserBioProps> = ({ user }) => {
                     <p className="opacity-70 text-zinc-500 text-sm font-normal text-center">POSTS</p>
                 </div>
                 <div className="block justify-center space-y-3">
-                    <p className="text-center text-stone-800 text-2xl font-normal">{user.followers}</p>
+                    <p className="text-center text-stone-800 text-2xl font-normal">{formatCount(user.followers)}</p>
                     <p className="opacity-70 text-zinc-500 text-sm font-normal text-center">FOLLOWERS</p>
                 </div>
                 <div className="block justify-center space-y-3">
-                    <p className="text-center text-stone-800 text-2xl font-normal">{user.following}</p>
+                    <p className="text-center text-stone-800 text-2xl font-normal">{formatCount(user.following)}</p>
                     <p className="opacity-70 text-zinc-500 text-sm font-normal text-center">FOLLOWING</p>
                 </div>
             </div>
